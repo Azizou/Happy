@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/u_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/u_name"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/look_categories"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tpol" 
+            android:id="@+id/idpol"
+            android:onClick="toggle_contents"
+            />
+
+        <LinearLayout
+            android:id="@+id/pol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/Afro_pol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/African" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/NA_pol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/NorthAmerican" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/SA_pol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SouthAmerican" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/Euro_pol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/European" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/Aus_pol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Australian" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/Asia_pol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Asian" >
+            </CheckBox>
+        </LinearLayout>
+
+        <TextView
+            android:onClick="toggle_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tsci"
+             android:id="@+id/idsci" />
+
+        <LinearLayout
+            android:id="@+id/sci"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/physci"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phy" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/chemsci"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chem" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/medsci"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/med" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/cssci"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cs" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/engsci"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eng" >
+            </CheckBox>
+        </LinearLayout>
+
+        <TextView
+            android:onClick="toggle_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tee"
+             android:id="@+id/idbe" />
+
+        <LinearLayout
+            android:id="@+id/be"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/eetech"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/techent" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/eere"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/re" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/eefood"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/food" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/eeclothes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clothes" >
+            </CheckBox>
+        </LinearLayout>
+
+        <TextView
+             android:id="@+id/idse"
+            android:onClick="toggle_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tse" />
+
+        <LinearLayout
+            android:id="@+id/se"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/sehealth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/health" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/serights"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rights" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/seedu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edu" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/seother"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/other" >
+            </CheckBox>
+        </LinearLayout>
+
+        <TextView
+             android:id="@+id/ident"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ttain" />
+
+        <LinearLayout
+            android:id="@+id/ent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/esports"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sports" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/emusic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/music" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/efilm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/film" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/ecomedy"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/comedy" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/ereality"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reality" >
+            </CheckBox>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pro_button" />
+    </LinearLayout>
+
+</ScrollView>
