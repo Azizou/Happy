@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="titles">
+        <item>Home</item>
+        <item>My Profile</item>
+        <item>About this App</item>
+        <item>Settings</item>
+        <item>Rate App</item>
+    </string-array>
+    <string-array name="hours">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+        <item>12</item>
+        <item>18</item>
+    </string-array>
+    
+    <string-array name="mins">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        
+    </string-array>
+    
+     <string-array name="days">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        
+    </string-array>
+    
+      <string-array name="weeks">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>10</item>
+        
+    </string-array>
+
+    <array name="icons">
+        <item>@drawable/home</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/about</item>
+        <item>@drawable/settings</item>
+        <item>@drawable/rateapp</item>
+    </array>
+
+</resources>

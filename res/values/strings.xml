@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="feels">I feel &#x2026;</string>
     <string name="app_name">HappyMe</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="look_categories"><b>What type of people do you look up to?  Tick all that apply.</b></string>
     <string name="tpol"> Political leaders</string>
-    <string name = "African"> African</string>
-    <string name = "European"> European</string>
+    <string name="African"> African</string>
+    <string name="European"> European</string>
     <string name="NorthAmerican"> North American </string>
     <string name="Asian">Asian</string>
     <string name="Australian">Australian</string>
     <string name="SouthAmerican"> South American</string>
     <string name="u_name">Enter your Preferred name </string>
-    <string name = "tsci">Science and technology leaders</string>
+    <string name="tsci">Science and technology leaders</string>
     <string name="eng">Engineering</string>
     <string name="med">Medicine</string>
     <string name="math">Mathematics</string>
@@ -39,8 +40,34 @@
     <string name="reality">Reality Showstars</string>
     <string name="pro_button">Submit Preferences</string>
     <string name="imgdesc">Img for this menu Item</string>
- 
-    
-    
+    <string name="sad">Sad</string>
+    <string name="angry">Angry</string>
+    <string name="useless">Useless</string>
+    <string name="ashamed">Ashamed</string>
+    <string name="disappointed">Disappointed</string>
+    <string name="jealous">Jealous</string>
+    <string name="afraid">Afraid</string>
+    <string name="uncertain">Uncertain</string>
+    <string name="confused">Confused</string>
+    <string name="impatient">Impatient</string>
+    <string name="exhausted">Exhausted</string>
+    <string name="used">Used</string>
+    <string name="happy">Happy</string>
+    <string name="accomplished">Accomplished</string>
+    <string name="grateful">Grateful</string>
+    <string name="loved">Loved</string>
+    <string name="amused">Amused</string>
+    <string name="excited">Excited</string>
+    <string name="determined">Determined</string>
+    <string name="thoughtful">Thoughtful</string>
+    <string name="healthy">Healthy</string>
+    <string name="SriSri">SriSri </string>
+    <string name="setme">Ask me how I feel after every &#x2026;</string>
+    <string name="min">Minutes</string>
+    <string name="hour">Hours</string>
+    <string name="day">Days</string>
+    <string name="week">Weeks</string>
+    <string name="never">Don't notify me, I'll check in when I want to.</string>
+    <string name="submit">Apply</string>
 
 </resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setme" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/min" />
+
+            <Spinner
+                android:id="@+id/SpinnerMin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/hours"
+                android:prompt="@string/mins"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/hour" />
+
+            <Spinner
+                android:id="@+id/SpinnerHour"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/hours"
+                android:prompt="@string/hour"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/day" />
+
+            <Spinner
+                android:id="@+id/SpinnerDay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/days"
+                android:prompt="@string/feedbacktype"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/week" />
+
+            <Spinner
+                android:id="@+id/SpinnerWeek"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/days"
+                android:prompt="@string/weeks"
+                android:spinnerMode="dropdown" >
+            </Spinner>
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/radio_never"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/never" />
+    </RadioGroup>
+    
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/button_settings"
+        android:text="@string/submit"
+        ></Button>
+
+</LinearLayout>
