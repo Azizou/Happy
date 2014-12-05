@@ -67,7 +67,9 @@
     <string name="hour">Hours</string>
     <string name="day">Days</string>
     <string name="week">Weeks</string>
-    <string name="never">Don't notify me, I'll check in when I want to.</string>
+    <string name="never">Don\'t notify me, I\'ll check in when I want to.</string>
     <string name="submit">Apply</string>
+    <string name="select">Great! Which of these names do you resonate with? </string>
+    <string name="Finish">Done!</string>
 
 </resources>

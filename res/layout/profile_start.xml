@@ -19,6 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/look_categories"
+           
+          
              />
 
         <TextView
@@ -27,13 +29,16 @@
             android:text="@string/tpol" 
             android:id="@+id/idpol"
             android:onClick="toggle_contents"
+           
+            
             />
 
         <LinearLayout
             android:id="@+id/pol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            >
 
             <CheckBox
                 android:id="@+id/Afro_pol"
@@ -83,7 +88,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tsci"
-             android:id="@+id/idsci" />
+             android:id="@+id/idsci" 
+             />
 
         <LinearLayout
             android:id="@+id/sci"
@@ -263,7 +269,8 @@
             android:id="@+id/pbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pro_button" />
+            android:text="@string/pro_button"
+            android:onClick="submitClicked" />
     </LinearLayout>
 
 </ScrollView>

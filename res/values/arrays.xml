@@ -16,40 +16,132 @@
         <item>12</item>
         <item>18</item>
     </string-array>
-    
-    <string-array name="mins">
+    <string-array name="mins"> 
         <item>10</item>
         <item>20</item>
         <item>30</item>
         <item>40</item>
         <item>50</item>
-        
     </string-array>
-    
-     <string-array name="days">
+    <string-array name="days">
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
-        
     </string-array>
-    
-      <string-array name="weeks">
+    <string-array name="weeks">
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>10</item>
+    </string-array>
+    <string-array name="African">
+        <item>Nelson Mandela</item>
+        <item>Julius Nyerere</item>
+        <item>Kwame Nkurumah</item>
+        <item>Thabo Mbeki</item>
+        <item>Jomo Kenyatta</item>
+    </string-array>
+    <string-array name="European">
+        <item>Machiavelli</item>
+        <item>Queen Elizabeth</item>
+        <item>Tony Blair</item>
+        <item>Anjela Merkel</item>
+        <item>Edward Milliband</item>
+    </string-array>
+    <string-array name="NorthAmerican">
+        <item>Barack Obama</item>
+        <item>Bill Clinton</item>
+        <item>Harry Truman</item>
+        <item>Theodore Roosevelt</item>
+    </string-array>
+    <string-array name="Asian">
+        <item>Ban Ki Moon</item>
+    </string-array>
+    <string-array name="Australian">
+        <item>Julia Gilard</item>
+    </string-array>
+    <string-array name="SouthAmerican">
+        <item>Hugo Chavez</item>
+    </string-array>
+    
+   
+    <string-array name="eng">
+        <item>Neil Armstrong</item>
+    </string-array>
+    <string-array name="med">
+        <item>Ben Carson</item>
+    </string-array>
+    <string-array name="math">
+        <item>Euler</item>
+    </string-array>
+    <string-array name="phy">
+        <item>Isaac Newton</item>
+        <item>Albert Einstein</item>
+    </string-array>
+    <string-array name="chem">
+        <item>John Dalton</item>
+    </string-array>
+    <string-array name="cs">
+        <item>Grace Hopper</item>
+    </string-array>
+    <string-array name="techent">
+        <item>Steve Jobs</item>
+    </string-array>
+    <string-array name="re">
+        <item>Robert Kiyosaki</item>
         
     </string-array>
+    <string-array name="food">
+        <item>Bakhresa</item>
+    </string-array>
+    <string-array name="clothes">
+        <item>Manga</item>
+    </string-array>
+   
+    <string-array name="health">
+        <item>Aga Khan</item>
+    </string-array>
+    <string-array name="rights">
+        <item>Malala</item>
+    </string-array>
+    <string-array name="edu">
+        <item>Oprah Winfrey</item>
+    </string-array>
+    <string-array name="other">
+        <item>Anita Borg</item>
+    </string-array>
+    <string-array name="sports">
+        <item>Lewis Hamilton</item>
+    </string-array>
+    <string-array name="music">
+        <item>Beyonce Knowles</item>
+    </string-array>
+    <string-array name="film">
+        <item>Tyler Perry</item>
+    </string-array>
+    <string-array name="comedy">
+        <item>Mr. Bean</item>
+        <item>Noah </item>
+    </string-array>
+    <string-array name="fashion">
+        
+        <item>Roberto Cavelli</item>
+    </string-array>
+	<string-array name = "reality">
+	    <item>Kim Kardashian</item>
+	</string-array>
+    <array name= "icons">
+                                                                                                                                                                                                                             
+            <item>@drawable/home</item>
+            <item>@drawable/profile</item>
+            <item>@drawable/about</item>
+            <item>@drawable/settings</item>
+            <item>@drawable/rateapp</item>
+        </array>
 
-    <array name="icons">
-        <item>@drawable/home</item>
-        <item>@drawable/profile</item>
-        <item>@drawable/about</item>
-        <item>@drawable/settings</item>
-        <item>@drawable/rateapp</item>
-    </array>
+   
 
 </resources>

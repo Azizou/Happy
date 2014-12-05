@@ -3,7 +3,6 @@ package com.example.happyme;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -32,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
 
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
-	@SuppressWarnings({ "deprecation", "deprecation" })
+
 	private ActionBarDrawerToggle mDrawerToggle;
 	private List<Item> rowItems;
 	private CustomAdapter adapter;
