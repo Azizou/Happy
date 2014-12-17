@@ -44,42 +44,48 @@
                 android:id="@+id/Afro_pol"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/African" >
+                android:text="@string/African"
+                android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/NA_pol"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/NorthAmerican" >
+                android:text="@string/NorthAmerican"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/SA_pol"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/SouthAmerican" >
+                android:text="@string/SouthAmerican"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/Euro_pol"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/European" >
+                android:text="@string/European"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/Aus_pol"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Australian" >
+                android:text="@string/Australian"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/Asia_pol"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Asian" >
+                android:text="@string/Asian" 
+                 android:onClick="onCheck">
             </CheckBox>
         </LinearLayout>
 
@@ -101,35 +107,40 @@
                 android:id="@+id/physci"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/phy" >
+                android:text="@string/phy"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/chemsci"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/chem" >
+                android:text="@string/chem"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/medsci"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/med" >
+                android:text="@string/med" 
+                 android:onClick="onCheck">
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/cssci"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/cs" >
+                android:text="@string/cs"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/engsci"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/eng" >
+                android:text="@string/eng" 
+                 android:onClick="onCheck">
             </CheckBox>
         </LinearLayout>
 
@@ -150,28 +161,32 @@
                 android:id="@+id/eetech"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/techent" >
+                android:text="@string/techent"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/eere"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/re" >
+                android:text="@string/re"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/eefood"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/food" >
+                android:text="@string/food"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/eeclothes"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/clothes" >
+                android:text="@string/clothes" 
+                 android:onClick="onCheck">
             </CheckBox>
         </LinearLayout>
 
@@ -192,28 +207,32 @@
                 android:id="@+id/sehealth"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/health" >
+                android:text="@string/health"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/serights"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/rights" >
+                android:text="@string/rights" 
+                 android:onClick="onCheck">
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/seedu"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/edu" >
+                android:text="@string/edu" 
+                 android:onClick="onCheck">
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/seother"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/other" >
+                android:text="@string/other"
+                 android:onClick="onCheck" >
             </CheckBox>
         </LinearLayout>
 
@@ -233,35 +252,40 @@
                 android:id="@+id/esports"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sports" >
+                android:text="@string/sports"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/emusic"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/music" >
+                android:text="@string/music"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/efilm"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/film" >
+                android:text="@string/film"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/ecomedy"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/comedy" >
+                android:text="@string/comedy"
+                 android:onClick="onCheck" >
             </CheckBox>
 
             <CheckBox
                 android:id="@+id/ereality"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/reality" >
+                android:text="@string/reality"
+                 android:onClick="onCheck" >
             </CheckBox>
         </LinearLayout>
 

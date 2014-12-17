@@ -31,7 +31,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/hours"
-                android:prompt="@string/mins"
+                android:prompt="@string/hours"
                 android:spinnerMode="dropdown" >
             </Spinner>
         </LinearLayout>
@@ -75,7 +75,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/days"
-                android:prompt="@string/feedbacktype"
+                android:prompt="@string/days"
                 android:spinnerMode="dropdown" >
             </Spinner>
         </LinearLayout>

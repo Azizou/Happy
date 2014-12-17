@@ -29,7 +29,8 @@ import android.widget.TextView;
 public class Fragment2 extends Fragment {
 	EditText t;
 	CheckBox Afro, NA, SA, Euro, Aus,Asia, physci, chemsci,medsci, cssci, engsci, eetech, eere, eefood, eeclothes, sehealth, seedu, serights, seother, esports, emusic, efilm , ecomedy, ereality;
-	
+	SharedPreferences settings = getActivity().getPreferences(0);
+	SharedPreferences.Editor editor = settings.edit();
 	Map<Integer, String> Checks = new TreeMap<Integer, String>();
 	@SuppressWarnings("serial")
 	Map<Integer, Integer> myids = new TreeMap<Integer, Integer>(){{
@@ -44,8 +45,22 @@ public class Fragment2 extends Fragment {
 		View rootView = inflater.inflate(R.layout.profile_start, container, false);
 		getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
-		SharedPreferences settings = getActivity().getPreferences(0);
-		SharedPreferences.Editor editor = settings.edit();
+		
+		
+		if(settings.getString("Username", "")==null){
+			return rootView;
+		}else{
+			Cat = settings.getStringSet("cats",Cat);
+			name = settings.getString("Username", "");
+			
+			t.setText(name);
+			Set<Integer> ints = Checks.keySet();
+			for(Integer i: ints){
+				CheckBox c = (CheckBox)getView().findViewById(i);
+				c.setChecked(true);
+			}
+		}
+		
 		
 		t = (EditText)rootView.findViewById(R.id.u_name);
 		ViewsCheck(R.id.Afro_pol, Afro);
@@ -79,23 +94,9 @@ public class Fragment2 extends Fragment {
 		
 	
 		
-		if(settings.getString("Username", "")==null){
-			return rootView;
-		}else{
-			Cat = settings.getStringSet("cats",Cat);
-			name = settings.getString("Username", "");
-			
-			t.setText(name);
-			Set<Integer> ints = Checks.keySet();
-			for(Integer i: ints){
-				CheckBox c = (CheckBox)getView().findViewById(i);
-				c.setChecked(true);
-			}
-		}
 		
-		editor.putString("Username",t.getText().toString());
-		editor.putStringSet("cats", Cat);
-		editor.commit();
+		
+		
 
 		return rootView;
 		
@@ -106,8 +107,7 @@ public class Fragment2 extends Fragment {
 	
 	public void submitClicked(View v){
 		
-		SharedPreferences settings = getActivity().getPreferences(0);
-		SharedPreferences.Editor editor = settings.edit();
+		
 		editor.putString("Username",t.getText().toString());
 		editor.putStringSet("cats", Cat);
 		editor.commit();
@@ -138,15 +138,23 @@ public class Fragment2 extends Fragment {
 
 	}
 	
+	public void onCheck(View v){
+		ViewsCheck(v.getId(),(CheckBox)v );
+	}
+	
 	public void ViewsCheck(int id, CheckBox c){
 		c = (CheckBox)getView().findViewById(id);
 		if (c.isChecked()){
 			Cat.add(c.getText().toString());
 			Checks.put(id, c.getText().toString());
+		}else{
+			Cat.remove(c.getText().toString());
+			Checks.remove(id);
 		}
 		
 	}
 
+	
 	
 
 	

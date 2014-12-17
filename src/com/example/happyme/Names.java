@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -85,7 +86,7 @@ public class Names extends Activity {
 
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-		setContentView(R.layout.names);
+		
 	}
 
 	public ArrayList<Model> getNames(Set<String> set){
@@ -100,7 +101,7 @@ public class Names extends Activity {
 				
 				m = new Model(st);
 				if(settings.getStringSet("mynames", null)!=null){
-					names=settings.getStringSet("mynames", null)
+					names=settings.getStringSet("mynames", null);
 							if(names.contains(st)){
 								m.setSelected(true);
 							}
@@ -121,6 +122,7 @@ public class Names extends Activity {
 		Context context;
 		List<Model> models;
 		SharedPreferences settings = getPreferences(0);
+		Model row_pos;
 		SharedPreferences.Editor editor = settings.edit();
 		public ListAdapter(Context context, int textViewResourceId,
 				ArrayList<Model> list) { // --CloneChangeRequired
@@ -144,11 +146,14 @@ public class Names extends Activity {
 				
 				CheckBox cb = (CheckBox)convertView.findViewById(R.id.cb);
 				
-				Model row_pos = models.get(position);
+				
+				row_pos = models.get(position);
 				cb.setText(row_pos.getName());
 				if(row_pos.isSelected()){
 					cb.setChecked(true);
 				}
+				
+			
 				// setting the image resource and title
 				
 			
@@ -157,7 +162,7 @@ public class Names extends Activity {
 		}
 
 		public void clicked(View v){
-			
+			editor.commit();
 		
 			startActivity(new Intent(context, MainActivity.class));
 		}
@@ -166,12 +171,12 @@ public class Names extends Activity {
 			CheckBox c = (CheckBox)v;
 			
 			if(c.isChecked()){
-				set.add();
+				settings.getStringSet("mynames", null).add(row_pos.getName());
 			}else{
-				
+				settings.getStringSet("mynames", null).remove(row_pos.getName());
 			}
-			editor
-			editor.commit();
+			
+			
 		}
 		
 		@Override

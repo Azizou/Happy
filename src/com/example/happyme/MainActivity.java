@@ -3,9 +3,15 @@ package com.example.happyme;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R;
 import android.annotation.SuppressLint;
+import android.app.AlarmManager;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
@@ -18,10 +24,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
+	final Dialog dialog = new Dialog(this);
 	ArrayList<String> names;
+	SharedPreferences settings = getPreferences(0);
 
 	String[] menutitles;
 	TypedArray menuIcons;
@@ -35,11 +48,27 @@ public class MainActivity extends ActionBarActivity {
 	private ActionBarDrawerToggle mDrawerToggle;
 	private List<Item> rowItems;
 	private CustomAdapter adapter;
+	private PendingIntent pendingIntent;
+
+	long itv;
 
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Intent myIntent = new Intent(MainActivity.this, Receiver.class);
+		pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0,
+				myIntent, 0);
+
+		AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+		if (settings.getLong("itv", -1) == -1) {
+
+			itv = 86400000;
+
+		}
+
+		alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+				itv, itv, pendingIntent);
 
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -82,9 +111,11 @@ public class MainActivity extends ActionBarActivity {
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		if (savedInstanceState == null) {
+		if (settings.getStringSet("mynames", null) == null) {
 			// on first time display view for first nav item
-			updateDisplay(0);
+			updateDisplay(2);
+		} else {
+			updateDisplay(1);
 		}
 	}
 
@@ -114,8 +145,9 @@ public class MainActivity extends ActionBarActivity {
 			fragment = new Fragment4();
 			break;
 		case 5:
-			fragment = new Fragment5();
-			break;
+			showDialog();
+			return;
+
 		default:
 			break;
 		}
@@ -191,11 +223,47 @@ public class MainActivity extends ActionBarActivity {
 		finish();
 	}
 
-	protected void onSaveInstanceState(Bundle savedInstanceState) {
-		super.onSaveInstanceState(savedInstanceState);
-		Log.i("MainActivity", "onSaveInstanceState");
-		savedInstanceState.putStringArrayList("list", names);
+	public void showDialog() {
 
+		dialog.setContentView(R.layout.custom);
+		dialog.setTitle("Feedback");
+
+		// set the custom dialog components - text, image and button
+		EditText text = (EditText) dialog.findViewById(R.id.message);
+
+		Button sendButton = (Button) dialog.findViewById(R.id.send);
+		// if button is clicked, close the custom dialog
+
+		Button cancelButton = (Button) dialog.findViewById(R.id.cancel);
+
+		dialog.show();
+	}
+
+	public void onClick(View v) {
+		if (v.getId() == R.id.send) {
+
+			String message = et_body.getText().toString();
+
+			RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup1);
+			RadioButton r = ((RadioButton) findViewById(rg
+					.getCheckedRadioButtonId()));
+			String type = r.getText().toString();
+
+			type += "\n" + message;
+
+			Intent i = new Intent(Intent.ACTION_SEND);
+			i.setType("message/rfc822");
+			i.putExtra(Intent.EXTRA_EMAIL,
+					new String[] { "imaculatemosha@yahoo.com" });
+			i.putExtra(Intent.EXTRA_SUBJECT, "Feedback from app");
+			i.putExtra(Intent.EXTRA_TEXT, type);
+
+			Toast.makeText(this, "Thank you!", Toast.LENGTH_SHORT).show();
+			startActivity(Intent.createChooser(i, "Send mail..."));
+
+		} else if (v.getId() == R.id.cancel) {
+			dialog.dismiss();
+		}
 	}
 
 }

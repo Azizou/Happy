@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string name = "mins">Minutes</string>
     <string name="feels">I feel &#x2026;</string>
     <string name="app_name">HappyMe</string>
     <string name="hello_world">Hello world!</string>
@@ -62,7 +62,7 @@
     <string name="thoughtful">Thoughtful</string>
     <string name="healthy">Healthy</string>
     <string name="SriSri">SriSri </string>
-    <string name="setme">Ask me how I feel after every &#x2026;</string>
+    <string name="setme">Check on me after &#x2026;</string>
     <string name="min">Minutes</string>
     <string name="hour">Hours</string>
     <string name="day">Days</string>
@@ -71,5 +71,10 @@
     <string name="submit">Apply</string>
     <string name="select">Great! Which of these names do you resonate with? </string>
     <string name="Finish">Done!</string>
-
+    <string name="bug">Bug</string>
+    <string name="idea">Idea</string>
+    <string name="f_other">Other</string>
+	<string name="Send">Send</string>
+	<string name="Cancel">Cancel</string>
+	<string name="feedback">What more would you like from this app?</string>
 </resources>
